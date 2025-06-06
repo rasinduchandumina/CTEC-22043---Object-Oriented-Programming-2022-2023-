@@ -84,29 +84,29 @@ public class RegistrationForm extends JFrame {
     private void setupLayout() {
         setLayout(new BorderLayout());
 
-        // Main panel
+        // here is the code segment of Main panel
         JPanel mainPanel = new JPanel(new BorderLayout());
 
-        // Form panel (left side)
+        // Here is the Form panel (left side)
         JPanel formPanel = new JPanel(new GridBagLayout());
         formPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(5, 5, 5, 5);
         gbc.anchor = GridBagConstraints.WEST;
 
-        // Name row
+        // Name row cde segment 
         gbc.gridx = 0; gbc.gridy = 0;
         formPanel.add(new JLabel("Name"), gbc);
         gbc.gridx = 1;
         formPanel.add(nameField, gbc);
 
-        // Mobile row
+        // Mobile row code segment 
         gbc.gridx = 0; gbc.gridy = 1;
         formPanel.add(new JLabel("Mobile"), gbc);
         gbc.gridx = 1;
         formPanel.add(mobileField, gbc);
 
-        // Gender row
+        // Gender row code segment 
         gbc.gridx = 0; gbc.gridy = 2;
         formPanel.add(new JLabel("Gender"), gbc);
         gbc.gridx = 1;
@@ -115,7 +115,7 @@ public class RegistrationForm extends JFrame {
         genderPanel.add(femaleRadio);
         formPanel.add(genderPanel, gbc);
 
-        // DOB row
+        // Here is the code segment for   DOB row
         gbc.gridx = 0; gbc.gridy = 3;
         formPanel.add(new JLabel("DOB"), gbc);
         gbc.gridx = 1;
@@ -125,7 +125,7 @@ public class RegistrationForm extends JFrame {
         dobPanel.add(yearCombo);
         formPanel.add(dobPanel, gbc);
 
-        // Address row
+        //Here is the code segment for    address row
         gbc.gridx = 0; gbc.gridy = 4;
         gbc.anchor = GridBagConstraints.NORTHWEST;
         formPanel.add(new JLabel("Address"), gbc);
@@ -134,13 +134,13 @@ public class RegistrationForm extends JFrame {
         addressScroll.setPreferredSize(new Dimension(200, 60));
         formPanel.add(addressScroll, gbc);
 
-        // Terms checkbox
+        //Here is the code segment for   terms checkbox
         gbc.gridx = 0; gbc.gridy = 5;
         gbc.gridwidth = 2;
         gbc.anchor = GridBagConstraints.WEST;
         formPanel.add(termsCheckBox, gbc);
 
-        // Button panel
+        //Here is the code segment for  Button panel
         gbc.gridx = 0; gbc.gridy = 6;
         gbc.gridwidth = 2;
         gbc.anchor = GridBagConstraints.CENTER;
@@ -168,9 +168,9 @@ public class RegistrationForm extends JFrame {
         add(titleLabel, BorderLayout.NORTH);
         add(mainPanel, BorderLayout.CENTER);
     }
-
+         // this is code segment for Submit button action
     private void setupEventHandlers() {
-        // Submit button action
+       
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -192,7 +192,7 @@ public class RegistrationForm extends JFrame {
             }
         });
 
-        // Real-time update when fields change
+        // Real-time update when fields change 
         nameField.addActionListener(e -> updateDisplay());
         mobileField.addActionListener(e -> updateDisplay());
         maleRadio.addActionListener(e -> updateDisplay());
